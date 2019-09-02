@@ -11,6 +11,12 @@ body {
     grid-gap: 1em;
 }
 
+.v1 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border-left: 3px solid white;
+}
+
 .name {
     grid-column: 2/5;
     grid-row: 2/4;
@@ -25,7 +31,8 @@ body {
 .description {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 4vmin;
-    color: #cdb592;
+    color: white;
+    /*color: #cdb592;*/
     grid-column: 2;
     grid-row: 5;
     z-index: 1;
@@ -39,13 +46,14 @@ a {
 
 a:hover {
     text-shadow: 0.1px 0.1px 2px;
+    cursor: pointer;
 }
 
-
+/*
 .rotate {
     transform: rotate(90deg)
 }
-
+*/
 .picture {
     /*
     background-image: url('sanna1.jpg');
@@ -70,7 +78,7 @@ a:hover {
     display: inline-block;
 }
 
-@media (max-width: 1225px) {
+@media (max-width: 1378px) {
     #pic2 {
         width: 0;
         height: 0;
@@ -81,5 +89,27 @@ a:hover {
     #pic1 {
         width: 100%;
         height: auto;
+    }
+
+    .picture {
+        grid-column: 1/6;
+    }
+
+    .name {
+        grid-column: 1/4;
+        grid-row: 1/4;
+    }
+
+    .description {
+        grid-row: initial;
+        grid-column: initial;
+        position: absolute;
+        bottom: 20vmin;
+        left: 4vmin;
+        font-size: 6vmin;
+    }
+
+    .rotate {
+        transform: initial;
     }
 }
